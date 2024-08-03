@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+#wrapper{
+    height:100vh;
+    width: 100vw;
+
+    /* take it for flex */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.btn-pink{
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    color:white;
+    font-size:18px;
+    box-shadow:5px 5px 7px 0px #0000003f;
+    position:relative;
+    z-index:1;
+
+}
+
+/* declaring effect before hover */
+.btn-pink::before{
+    content:"";
+    background-color: #1f1f1f;
+    position:absolute;
+
+    /* filling in full div */
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transform:scaleX(0); /* It is for no scale before hover */
+    transform-origin:left;
+    transition: all 1s;
+    z-index:-2;
+}
+
+/* changing effect after hover */
+.btn-pink:hover::before{
+    transform:scaleX(1.0);
+}

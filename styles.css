@@ -46,3 +46,7 @@
 .btn-pink:hover::before{
     transform:scaleX(1.0);
 }
+.btn-pink{
+    transition: 0.3s ease;
+    cursor:pointer; /* changing cursor to hand */
+}
